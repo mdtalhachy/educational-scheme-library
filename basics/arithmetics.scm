@@ -8,4 +8,6 @@
 
 (/ 9 3) ;; division
 
+(remainder 3 4) ;; remainder
+
 
