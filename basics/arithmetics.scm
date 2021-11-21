@@ -10,4 +10,4 @@
 
 (remainder 3 4) ;; remainder
 
-
+(exact->inexact (/ 3 2)) ;; turning fraction into decimal e.g., 1+1/2 to 1.5
