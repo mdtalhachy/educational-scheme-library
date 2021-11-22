@@ -38,3 +38,31 @@ odd-list
 ;; #Output#
 ;; (3 5 7)
 ;;---
+
+
+
+
+
+
+
+;; ### Looping through a list ###
+;; You can pass "list" procedure as argument directly in a function
+;; e.g., (define sum-list list), where list is a procedure, not a variable name
+
+;;---
+;; ##Example: Print all the items in a list##
+
+(define print-lst list
+  (if (null? list)
+      exit
+      (begin
+       (display (car list))
+       (display " ")
+       (print-lst (cdr list)))))
+
+(define my-list (list 8 30 0))
+(print-lst my-list)
+
+;; #Output#
+;; 3 4 5 #<procedure:exit>
+;;---
