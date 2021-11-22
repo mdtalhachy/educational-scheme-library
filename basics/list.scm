@@ -12,6 +12,9 @@
 ;; (a 4 b)
 ;;---
 
+
+
+
 ;; ### list can contain operations inside as well ###
 
 ;;---
@@ -22,6 +25,8 @@
 ;; #Output#
 ;; (a 1 c)
 ;;---
+
+
 
 
 ;; ### list can be named to a variable ###
@@ -41,6 +46,21 @@ odd-list
 
 
 
+
+;; ### Length of a list can be found using "length" procedure
+;; Structure
+
+(length list)
+
+;;---
+;; ##Example##
+
+(define mylist-a (list 'a 'b 'c))
+(length mylist-a)
+
+;; #Output#
+;; 3
+;;---
 
 
 
@@ -65,4 +85,23 @@ odd-list
 
 ;; #Output#
 ;; 3 4 5 #<procedure:exit>
+;;---
+
+
+
+
+;; ### Sum & Average of a list of integers ###
+
+(define (sum-lst list)
+  (if (null? list)
+      0
+      (+ (car list) (sum (cdr list)))))
+
+(define (average-lst list)
+  (/ (sum-lst list) (length list)))
+
+(average-lst (list 3 4 5))
+
+;; #Output#
+;; 4
 ;;---
