@@ -7,9 +7,11 @@
 ;; ##Example##
 
 (list 'a 4 'b)
+(list 1 2 3)
 
 ;; #Output#
 ;; (a 4 b)
+;; (1 2 3)
 ;;---
 
 
@@ -104,4 +106,19 @@ odd-list
 
 ;; #Output#
 ;; 4
+;;---
+
+
+
+;; ### Double the values of the whole list ###
+
+(define double-list lst
+  (if (null? lst)
+      '()
+      (cons (* (car lst) 2) (double-list (cdr lst)))))
+
+(double-list '(22 33 44))
+
+;; #Output#
+;; (44 66 88)
 ;;---
